@@ -1,7 +1,12 @@
 # nodejs-rest-api
 small NodeJS based service \ backend that allows us to manage users via REST API, the service should interact with an SQL DB.
 in the project there is a basic player model named -> user
+# The most important commands:
 
+|#   |   command  | description |
+|----|------------|-------------|
+| 1. | docker-compose up| To deploy the project and run the api-rest application|
+| 2. | docker-compose run app npm run coverage | after we deploy the application we open another bash or cmd terminal and run the unit test |
 # A user has the following fields:
 
 
