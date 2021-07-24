@@ -18,6 +18,21 @@ in the project there is a basic player model named -> user
 |#   |   path  | method| description |
 |----|------------|--|-------------|
 | 1. | http://localhost:8080/api-docs/ | GET | UI for Node Rest API documentation|
+
+
+# Tools and packages used :
+|#   |   program  |  description         |
+|----|----------|----------------|
+| 1. |	postman     |  Postman is a collaboration platform for API development |
+| 2. |	chai    | Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework. |
+| 3. |	chai-as-promised     |  Extends Chai with assertions about promises |
+| 4. |	cors     |  It is a mechanism to allow or restrict requested resources on a web server depend on where the HTTP request was initiated |
+| 5. |	dotenv     | Loads environment variables from .env file. |
+| 6. |	express     |  The Express philosophy is to provide small, robust tooling for HTTP servers |
+| 7. |	Mocha     |  Mocha is a feature-rich JavaScript test framework running on Node |
+| 8. |	mongoose    |  Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node. js |
+| 9. |	swagger-ui-express     |  is a living documentation for your API hosted from your API server via a route. |
+|  10.  | yamljs |This is an implementation of YAML, a human-friendly data serialization language|
 # A user has the following fields:
 
 
