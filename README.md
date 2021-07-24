@@ -14,6 +14,10 @@ in the project there is a basic player model named -> user
 | 2. | http://localhost:8080/api/user| POST | This function used to create new user|
 | 3. | http://localhost:8080/api/user| DELETE | This function used to delete user by Id|
 
+# Swagger API UI
+|#   |   path  | method| description |
+|----|------------|--|-------------|
+| 1. | http://localhost:8080/api-docs/ | GET | UI for Node Rest API documentation|
 # A user has the following fields:
 
 
