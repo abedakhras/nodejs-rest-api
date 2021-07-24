@@ -7,6 +7,13 @@ in the project there is a basic player model named -> user
 |----|------------|-------------|
 | 1. | docker-compose up| To deploy the project and run the api-rest application|
 | 2. | docker-compose run app npm run coverage | after we deploy the application we open another bash or cmd terminal and run the unit test |
+# Availabe service paths
+|#   |   path  | method| description |
+|----|------------|--|-------------|
+| 1. | http://localhost:8080/api/user| GET | API for fetching all users|
+| 2. | http://localhost:8080/api/user| POST | This function used to create new user|
+| 3. | http://localhost:8080/api/user| DELETE | This function used to delete user by Id|
+
 # A user has the following fields:
 
 
