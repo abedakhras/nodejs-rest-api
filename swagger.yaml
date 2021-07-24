@@ -1,0 +1,119 @@
+swagger: '2.0'
+info:
+  description: Node.js Rest API doc
+  version: '1.0.0'
+  title: Node Rest API documentation
+  termsOfService: 'http://swagger.io/terms/'
+  contact:
+    email: rapiddevpro@gmail.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+host: localhost:80
+basePath: /api
+schemes:
+- http
+paths:
+  /user:
+    post:
+      security:
+        - Bearer: []
+      tags:
+        - user Module
+      summary: This function used to create a user
+      description: API for creating user
+      parameters:
+        - in: body
+          name: body
+          description: Create user Payload
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: user Created Successfully
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '400':
+          description: Invalid Fields
+        '500':
+          description: Internal Server Error
+    get:
+      security:
+        - Bearer: []
+      tags:
+        - user Module
+      summary: This function used to reterive all the Users
+      description: API for fetching all users
+      parameters:
+        - name: skip
+          in: query
+          description: No.of record to be skipped for pagination
+          type: number
+          required: false
+        - name: limit
+          in: query
+          description: no. of record api should return for pagination
+          type: number
+          required: false
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: user fetched Successfully
+          schema:
+            $ref: '#/definitions/ApiResponse'
+        '400':
+          description: Invalid Fields
+        '500':
+          description: Internal Server Error
+    delete:
+      security:
+        - Bearer: []
+      tags:
+      - user Module
+      summary: This function used to delete spicific user by id
+      description: Remove user
+      parameters:
+        - name: id
+          in: path
+          description: user Id
+          type: string
+          required: true
+      produces:
+        - application/json
+      responses:
+        204:
+          description: user Deleted Successfully
+        '400':
+          description: Invalid Fields
+        '500':
+          description: Internal Server Error
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+definitions:
+  User:
+    properties:
+      name:
+        type: string
+        description: name of user
+      email:
+        type: string
+        description: email of user
+      password:
+        type: string
+        description: password of the user
+  ApiResponse:
+    type: object
+    properties:
+      status:
+        type: integer
+      message:
+        type: string
+      body:
+        type: object
